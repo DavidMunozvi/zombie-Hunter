@@ -38,6 +38,14 @@ body {
     position: absolute;
     top:4%;
     right: 7%;
+    
+}
+#play-button{
+    background-color: transparent;
+    border: none;
+    position: absolute;
+    top:4%;
+    right: 7%;
 }
 .img-btn{
     width: 70px;

@@ -21,7 +21,7 @@ Game.prototype.start = function() {
       this.generateObstacle(); //obstaculos velocidad de gen
     } 
 
-    if (this.framesCounter % 50 === 0) {
+    if (this.framesCounter % 20 === 0) {
       this.generateZombies(); //zombies velocidad de gen
     } 
 
