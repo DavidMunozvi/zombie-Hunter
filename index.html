@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+
 <head>
   <title>Zombie Hunter</title>
 
@@ -18,28 +19,38 @@
   <link href="https://fonts.googleapis.com/css?family=Creepster" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Boogaloo" rel="stylesheet">
 </head>
-<body>
-  <button class="pause-button">PAUSE</button>
-  <canvas id="canvas" width="1200" height="700"></canvas>
 
-  <!-- <div id="play-cont">
+<body>
+
+  <div id="play-cont">
     <main class="background">
-        <div class="contain1"><img class="logo" src="./img/game-logo.png" alt=""></div>
-        <div class="controls">
-            <a class="controls-btn" href="#">CONTROLS</a>
-            <p>Press<span>⇧</span>for jump</p>
-            <p>Press "A" for attack</p>
-            <p class="hunt">Now you're ready for the hunt!</p>
-        </div>
-        <div class="play-cont"><button class="play-btn">PLAY</button></div> 
+      <div class="contain1"><img class="logo" src="./img/game-logo.png" alt=""></div>
+      <div class="controls">
+        <a class="controls-btn" href="#">CONTROLS</a>
+        <p>Press<span>⇧</span>for jump</p>
+        <p>Press "A" for attack</p>
+        <p class="hunt">Now you're ready for the hunt!</p>
+      </div>
+      <div class="play-cont"><button id="play-btn">PLAY</button></div>
     </main>
-</div> -->
-<!-- <div id="levels-cont">
-  <div class="logo-levels"> <img class="logo2" src="./img/game-logo.png" alt="logo"> </div>
-  <div class="levels-box">
-    <img class="level1" src="./img/level-1.jpg" alt="level 1">
-    <img class="level2" src="./img/level-2.jpg" alt="level 2">
   </div>
-</div> -->
+
+  <div id="levels-cont">
+    <div class="logo-levels"> <img class="logo2" src="./img/game-logo.png" alt="logo"> </div>
+    <div class="levels-box">
+
+      <button id="level1-btn"> <img class="level1-img" src="./img/level-1.jpg" alt="level 1"> </button>
+      <button id="level2-btn"> <img class="level2" src="./img/level-2.jpg" alt="level 2"> </button>
+
+    </div>
+  </div>
+
+  <div id="canvas-cont">
+    <button id="pause-button"><img class="img-btn" src="./img/pause-btn.png" alt="logo"></button>
+
+    <canvas id="canvas" width="1200" height="700"></canvas>
+    <img class="logo3" src="./img/game-logo.png" alt="logo">
+  </div>
 </body>
+
 </html>

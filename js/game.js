@@ -50,14 +50,16 @@ Game.prototype.start = function() {
   }.bind(this), 1500 / this.fps);
 };
 
-Game.prototype.stop = function() {
+
+
+Game.prototype.stopGame = function() {
   clearInterval(this.interval);
 };
 
 
 
 Game.prototype.gameOver = function() {
-  this.stop();
+  this.stopGame();
   
   if(confirm("GAME OVER. Play again?")) {
     this.reset();
@@ -89,8 +91,9 @@ Game.prototype.obstacleCollision = function() {
 };
 
 Game.prototype.clearObstacles = function() {
-  this.obstacles.pop()
-   
+  this.obstacles.unshift()
+    
+  
 };
 
 Game.prototype.generateObstacle = function() {
@@ -149,6 +152,7 @@ Game.prototype.draw = function() {
   
   this.drawScore();  
 };
+
 
 
 Game.prototype.moveAll = function() {
