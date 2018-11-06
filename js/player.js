@@ -26,7 +26,7 @@ function Player(game) {
 }
 
 var TOP_KEY = 38;
-var S = 83;
+var A = 65;
 
 Player.prototype.draw = function() {
 
@@ -60,7 +60,7 @@ Player.prototype.setListeners = function() {
     if (event.keyCode === TOP_KEY && this.y == this.y0) {
       this.y -= 5;
       this.vy -= 10;
-    } else if (event.keyCode == S) {
+    } else if (event.keyCode == A) {
       this.shoot();
     }
   }.bind(this);

@@ -1,0 +1,153 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+/*Controls section*/
+#play-cont {
+  margin: 0;
+  padding: 0;
+  background-color: transparent;
+  background-image: url("../img/fondo-jugar.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+  background-size: cover;
+  height: 100vh;
+  width: 100vw;
+}
+
+.contain1 {
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: center;
+}
+
+.logo {
+  width: 550px;
+  height: 250px;
+  margin-top: 80px;
+}
+
+.controls {
+  width: 180px;
+  height: 40px;
+  background-color: white;
+  text-align: center;
+  overflow: hidden;
+  border-radius: 10px;
+  background-color: blueviolet;
+  position: absolute;
+  top: 30px;
+  right: 5%;
+  box-shadow: 1px 0px 20px 3px rgba(0, 0, 0, 0.55);
+}
+.controls p {
+  font-family: "Boogaloo", cursive;
+  color: white;
+  font-size: 20px;
+  margin: 10px;
+}
+.controls:hover {
+  height: 200px;
+}
+.controls-btn {
+  height: 40px;
+  text-decoration: none;
+  line-height: 40px;
+  font-family: "Creepster", cursive;
+  font-size: 30px;
+  color: white;
+}
+.play-btn {
+  width: 180px;
+  height: 40px;
+  border-radius: 10px;
+  font-family: "Creepster", cursive;
+  font-size: 30px;
+  background-color: #a81818;
+  color: white;
+  border: none;
+  box-shadow: 1px 0px 20px 3px rgba(0, 0, 0, 0.75);
+  cursor: pointer;
+}
+.play-cont {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-top: 250px;
+}
+/*Levels section*/
+#levels-cont {
+  margin: 0;
+  padding: 0;
+  background-color: transparent;
+  background-image: url("../img/fondo-levels.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+  background-size: cover;
+  height: 100vh;
+  width: 100vw;
+}
+.logo-levels {
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: start;
+}
+.logo2 {
+  width: 280px;
+  height: 130px;
+  margin-top: 30px;
+  margin-left: 30px;
+}
+.levels-box {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-top: 80px;
+}
+.level1 {
+  width: 230px;
+  height: 350px;
+  border-radius: 10px;
+  filter: sepia(100%);
+}
+.level2 {
+  width: 230px;
+  height: 350px;
+  border-radius: 10px;
+  margin-left: 50px;
+  filter: sepia(100%);
+}
+.level1:hover {
+  filter: sepia(100%);
+  transition: 0.3s ease-in-out;
+  animation: bounce 1s;
+  filter: none;
+}
+.level2:hover {
+  filter: none;
+  transition: 0.3s ease-in-out;
+  animation: bounce 1s;
+}
+@keyframes bounce {
+  0%,
+  20%,
+  60%,
+  100% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+
+  40% {
+    -webkit-transform: translateY(-20px);
+    transform: translateY(-20px);
+  }
+
+  80% {
+    -webkit-transform: translateY(-10px);
+    transform: translateY(-10px);
+  }
+}

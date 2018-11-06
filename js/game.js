@@ -89,9 +89,8 @@ Game.prototype.obstacleCollision = function() {
 };
 
 Game.prototype.clearObstacles = function() {
-  this.obstacles = this.obstacles.filter(function(obstacle) {
-    return obstacle.x >= 0;
-  });
+  this.obstacles.pop()
+   
 };
 
 Game.prototype.generateObstacle = function() {
