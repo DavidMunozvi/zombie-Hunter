@@ -4,17 +4,22 @@
 <head>
   <title>Zombie Hunter</title>
 
-  <!-- IMPORTANTE EL ORDEN -->
-  <!-- Si un objeto necesita otro, incluirlo antes -->
+  
   <script type="text/javascript" src="js/background.js"></script>
+  <script type="text/javascript" src="js/backgroundBoss.js"></script>
   <script type="text/javascript" src="js/bullet.js"></script>
   <script type="text/javascript" src="js/player.js"></script>
+  <script type="text/javascript" src="js/boss.js"></script>
   <script type="text/javascript" src="js/obstacle.js"></script>
   <script type="text/javascript" src="js/zombies.js"></script>
+  <script type="text/javascript" src="js/demons.js"></script>
   <script type="text/javascript" src="js/game.js"></script>
   <script type="text/javascript" src="js/index.js"></script>
 
-  <link rel="stylesheet" type="text/css" href="css/style.css">
+  <link rel="stylesheet" type="text/css" href="css/canvas.css">
+  <link rel="stylesheet" type="text/css" href="css/levels.css">
+  <link rel="stylesheet" type="text/css" href="css/controls-section.css">
+  
   <!--Fuentes-->
   <link href="https://fonts.googleapis.com/css?family=Creepster" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Boogaloo" rel="stylesheet">
@@ -22,7 +27,7 @@
 
 <body>
 
-  <div id="play-cont">
+  <div id="play-cont" class="fade-in">
     <main class="background">
       <div class="contain1"><img class="logo" src="./img/game-logo.png" alt=""></div>
       <div class="controls">
@@ -35,23 +40,23 @@
     </main>
   </div>
 
-  <div id="levels-cont">
+  <div id="levels-cont" class="fade-in">
     <div class="logo-levels"> <img class="logo2" src="./img/game-logo.png" alt="logo"> </div>
     <div class="levels-box">
 
       <button id="level1-btn"> <img class="level1-img" src="./img/level-1.jpg" alt="level 1"> </button>
-      <button id="level2-btn"> <img class="level2" src="./img/level-2.jpg" alt="level 2"> </button>
+      <button id="level2-btn"> <img class="level2-img" src="./img/level-2.jpg" alt="level 2"> </button>
 
     </div>
   </div>
 
 
 
-  <div id="canvas-cont">
+  <div id="canvas-cont" class="fade-in">
     <button id="play-button"><img class="img-btn" src="./img/play-btn.png" alt="logo"></button>
     <button id="pause-button"><img class="img-btn" src="./img/pause-btn.png" alt="logo"></button>
 
-    
+
     <canvas id="canvas" width="1200" height="700"></canvas>
     <img class="logo3" src="./img/game-logo.png" alt="logo">
   </div>

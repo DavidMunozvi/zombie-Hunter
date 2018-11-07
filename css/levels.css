@@ -1,0 +1,105 @@
+.fade-in {
+	opacity: 1;
+	animation-name: fadeInOpacity;
+	animation-iteration-count: 1;
+	animation-timing-function: ease-in;
+	animation-duration: 0.75s;
+}
+
+@keyframes fadeInOpacity {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+
+
+#levels-cont {
+  margin: 0;
+  padding: 0;
+  background-color: transparent;
+  background-image: url("../img/fondo-levels.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+  background-size: cover;
+  height: 100vh;
+  width: 100vw;
+  display: none;
+}
+.logo-levels {
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: start;
+}
+.logo2 {
+  width: 280px;
+  height: 130px;
+  margin-top: 30px;
+  margin-left: 30px;
+}
+.levels-box {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-top: 80px;
+}
+.level1-img {
+  width: 230px;
+  height: 350px;
+  border-radius: 10px;
+  box-shadow: 1px 0px 20px 3px rgba(0, 0, 0, 0.75);
+}
+#level1-btn{
+    filter: sepia(100%);
+    background: transparent;
+    border: none;
+    box-shadow: 5px;
+}
+#level1-btn:hover {
+  filter: sepia(100%);
+  transition: 0.3s ease-in-out;
+  animation: bounce 1s;
+  filter: none;
+}
+.level2-img{
+    width: 230px;
+    height: 350px;
+    border-radius: 10px;
+    box-shadow: 1px 0px 20px 3px rgba(0, 0, 0, 0.75);
+  }
+
+#level2-btn{
+    filter: sepia(100%);
+    margin-left: 50px;
+    background: transparent;
+    border: none;
+}
+#level2-btn:hover {
+  filter: none;
+  transition: 0.3s ease-in-out;
+  animation: bounce 1s;
+  filter: none;
+}
+@keyframes bounce {
+  0%,
+  20%,
+  60%,
+  100% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+
+  40% {
+    -webkit-transform: translateY(-20px);
+    transform: translateY(-20px);
+  }
+
+  80% {
+    -webkit-transform: translateY(-10px);
+    transform: translateY(-10px);
+  }
+}
