@@ -13,8 +13,12 @@ function Boss (game){
 
     this.img.frames = 1;
     this.img.frameIndex = 0;
+    
+    this.maxHp = 100;
+    this.hp = 100;
 
-    this.health = 1000;
+    this.appear = false;
+    this.showHp();
 }
 Boss.prototype.draw = function() {
     this.game.ctx.drawImage(
@@ -28,4 +32,12 @@ Boss.prototype.draw = function() {
       this.w,
       this.h
     );
+    }
+
+    Boss.prototype.showHp = function (score) {
+        document.querySelector(".health-bar").dataset.total = this.maxHp;
+        document.querySelector(".health-bar").dataset.value = this.hp;
+        document.querySelector(".bar").style.width = (this.hp / this.maxHp) * 100 + "%";
+
+        score ? document.querySelector(".health-bar").style.display = "block" : '';
     }

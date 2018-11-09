@@ -6,7 +6,7 @@ function Game(canvadId) {
 
   this.reset();
 }
-
+debugger
 Game.prototype.start = function() {
   this.interval = setInterval(function() {
     this.clear();
@@ -21,11 +21,11 @@ Game.prototype.start = function() {
       this.generateObstacle(); //obstaculos velocidad de gen
     } 
 
-    if (this.framesCounter % 10 === 0) {
+    if (this.framesCounter % 15 === 0) {
       this.generateZombies(); //zombies velocidad de gen
     } 
     
-    this.score += 1;
+    this.score += 0.01;
     
     this.moveAll();
 
@@ -33,13 +33,17 @@ Game.prototype.start = function() {
     
     
     if(this.score > 7){
+      this.boss.appear = true;
       this.drawBoss();
       this.generateDemons();
       this.zombies = [];
       this.obstacles = [];
+      this.boss.showHp(this.score);
     }else{
       this.draw();
     }
+
+
 
     // eliminamos obstáculos /zombies fuera del canvas
     this.clearObstacles();
@@ -165,11 +169,18 @@ Game.prototype.demonCollision = function() {
 
 
 
+
 Game.prototype.bulletCollision = function() {
   var isCollision = false;
     this.zombies.filter(function(zombie) {
        this.player.bullets.filter(function(elem,i){
-        if(this.player.bullets[i].x > zombie.x && this.player.bullets[i].x < (zombie.x + zombie.w)){
+        if(this.player.bullets[i].x > zombie.x && 
+          this.player.bullets[i].x < (zombie.x + zombie.w) &&  
+
+          this.player.bullets[i].y > zombie.y && 
+          (this.player.bullets[i].y) < (zombie.y + zombie.h)
+          
+          ){
           isCollision = true;
           this.player.bullets.pop();
         }
@@ -179,12 +190,34 @@ Game.prototype.bulletCollision = function() {
 
   this.demon.filter(function(demon) {
     this.player.bullets.filter(function(elem,i){
-     if(this.player.bullets[i].x > demon.x && this.player.bullets[i].x < (demon.x + demon.w)){
+     if(this.player.bullets[i].x > demon.x && 
+      this.player.bullets[i].x < (demon.x + demon.w) && 
+
+      this.player.bullets[i].y > demon.y && 
+      (this.player.bullets[i].y) < (demon.y + demon.h)
+      ){
        isCollision = true;
        this.player.bullets.pop();
      }
  }.bind(this))
 }.bind(this));
+
+
+  this.player.bullets.filter(function(elem,i){
+    if (this.boss.appear === true) {
+   if(this.player.bullets[i].x > this.boss.x && 
+    this.player.bullets[i].x < (this.boss.x + this.boss.w) && 
+    this.player.bullets[i].y > this.boss.y && 
+    (this.player.bullets[i].y) < (this.boss.y + this.boss.h)
+    
+    ){
+      this.youWin();
+      isCollision = true;
+      this.player.bullets.pop();
+     this.boss.hp -= 10;
+   }
+  }
+}.bind(this))
 
   return isCollision;
 };
@@ -233,3 +266,9 @@ Game.prototype.drawScore = function() {
   this.ctx.fillText(Math.floor(this.score), 50, 50);
 }
 
+Game.prototype.youWin = function() {
+  if(this.boss.hp < 0){
+    this.stopGame();
+    alert("you win");
+  }
+}

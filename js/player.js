@@ -57,7 +57,7 @@ Player.prototype.draw = function() {
 
 Player.prototype.setListeners = function() {
   document.onkeydown = function(event) {
-    if (event.keyCode === TOP_KEY ) {
+    if (event.keyCode === TOP_KEY && this.y == this.y0) {
       this.y -= 5;
       this.vy -= 10;
     } else if (event.keyCode == A) {

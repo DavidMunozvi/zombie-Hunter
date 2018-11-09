@@ -6,12 +6,11 @@ function Demon(game) {
     this.dx = 11;
   
     this.x = this.game.canvas.width;
-    this.y = this.game.player.y0 + this.game.player.h - this.h - 5;
+    this.y = 550
 
     this.img = new Image();
     this.img.src = 'img/demons.png';
-  
-  // número de imágenes diferentes
+
   this.img.frames = 8;
   this.img.frameIndex = 0;
   }
@@ -24,7 +23,7 @@ function Demon(game) {
       Math.floor(this.img.width / this.img.frames),
       this.img.height,
       this.x,
-      550,
+      this.y,
       this.w,
       this.h
     );

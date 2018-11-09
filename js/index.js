@@ -25,4 +25,6 @@ document.getElementById("play-btn").onclick = function(){
     document.getElementById("play-cont").style.display = "none";
     document.getElementById("levels-cont").style.display = "block";
   };
+  
+  
 }

@@ -7,12 +7,12 @@ function Zombie(game) {
     this.dx = 30;
   
     this.x = this.game.canvas.width;
-    this.y = this.game.player.y0 + this.game.player.h - this.h - 5;
+    this.y = 500;
 
     this.img = new Image();
   this.img.src = 'img/zombie-boy.png';
   
-  // número de imágenes diferentes
+ 
   this.img.frames = 10;
   this.img.frameIndex = 0;
   }
@@ -25,7 +25,7 @@ function Zombie(game) {
       Math.floor(this.img.width / this.img.frames),
       this.img.height,
       this.x,
-      500,
+      this.y,
       this.w,
       this.h
     );
