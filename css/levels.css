@@ -48,7 +48,7 @@
   margin-top: 80px;
 }
 .level1-img {
-  width: 230px;
+  width: 260px;
   height: 350px;
   border-radius: 10px;
   box-shadow: 1px 0px 20px 3px rgba(0, 0, 0, 0.75);
@@ -58,6 +58,7 @@
     background: transparent;
     border: none;
     box-shadow: 5px;
+    outline: none;
 }
 #level1-btn:hover {
   filter: sepia(100%);
@@ -66,7 +67,7 @@
   filter: none;
 }
 .level2-img{
-    width: 230px;
+    width: 260px;
     height: 350px;
     border-radius: 10px;
     box-shadow: 1px 0px 20px 3px rgba(0, 0, 0, 0.75);
@@ -77,6 +78,7 @@
     margin-left: 50px;
     background: transparent;
     border: none;
+    outline: none;
 }
 #level2-btn:hover {
   filter: none;

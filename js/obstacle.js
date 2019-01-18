@@ -4,7 +4,7 @@ function Obstacle(game) {
   this.w = 100;
   this.h = 50;
 
-  this.dx = 10;
+  this.dx = 8;
 
   this.x = this.game.canvas.width;
   this.y = this.game.player.y0 + this.game.player.h - this.h - 5;

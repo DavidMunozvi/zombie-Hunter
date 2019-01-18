@@ -37,20 +37,22 @@ body {
     background-color: transparent;
     border: none;
     position: absolute;
-    top:4%;
+    top:6%;
     right: 7%;
-    
+    outline: none;
 }
 #play-button{
     background-color: transparent;
     border: none;
     position: absolute;
-    top:4%;
+    top:6%;
     right: 7%;
+    outline: none;
 }
 .img-btn{
     width: 70px;
     height: 70px;
+    outline: none;
 }
 /*health bar*/
 .health-bar {
@@ -64,7 +66,7 @@ body {
     -moz-border-radius: 2px;
     border-radius: 2px;
     position: absolute;
-    right: 170px;
+    right: 180px;
     top: 350px;
     border: black 2px solid;
   }

@@ -11,11 +11,11 @@ function Boss (game){
     this.img = new Image();
     this.img.src = 'img/boss.png';
 
-    this.img.frames = 1;
+    this.img.frames = 3;
     this.img.frameIndex = 0;
     
-    this.maxHp = 100;
-    this.hp = 100;
+    this.maxHp = 300;
+    this.hp = 300;
 
     this.appear = false;
     this.showHp();
@@ -41,3 +41,11 @@ Boss.prototype.draw = function() {
 
         score ? document.querySelector(".health-bar").style.display = "block" : '';
     }
+
+    Boss.prototype.animateImg = function() {
+        if (this.game.framesCounter % 14 === 0) {
+          this.img.frameIndex += 1;
+      
+          if (this.img.frameIndex > 1) this.img.frameIndex = 0;
+        }
+      };

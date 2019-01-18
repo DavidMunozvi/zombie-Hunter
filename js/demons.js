@@ -3,7 +3,7 @@ function Demon(game) {
   
     this.w = 100;
     this.h = 100;
-    this.dx = 11;
+    this.dx = 20;
   
     this.x = this.game.canvas.width;
     this.y = 550
